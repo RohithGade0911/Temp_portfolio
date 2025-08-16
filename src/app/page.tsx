@@ -5,10 +5,24 @@ import Image from "next/image";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-2">
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center p-2">
+      {/* Header */}
+      <div className="text-center mb-16">
+        <p className="text-base text-gray-400 font-normal mb-4 italic">
+          Too broke for the fancy portfolio, so here's my budget-friendly 'masterpiece' till the real site escapes the pipeline 😉
+        </p>
+        <h1 className="text-4xl font-light text-gray-900 mb-3 tracking-tight">
+          ROHITH GADE
+        </h1>
+        <div className="w-16 h-px bg-gray-300 mx-auto mb-4"></div>
+        <p className="text-base text-gray-500 font-normal tracking-wide">
+          AI Workflow Architect | Agentic Workflow Designer
+        </p>
+      </div>
+      
       <div className="max-w-2xl w-full space-y-6">
         {/* Profile Image and Card Container */}
-        <div className="relative">
+        <div className="relative group">
           {/* Profile Image */}
           <div className="flex justify-center">
             <div className="relative w-[30rem] h-[35rem] z-20">
@@ -16,31 +30,18 @@ export default function Portfolio() {
                 src="/profile.jpg"
                 alt="Profile Photo"
                 fill
-                className="rounded-lg object-cover border-2 border-gray-200 shadow-lg"
+                className="rounded-lg object-cover border-2 border-gray-200 shadow-lg transition-transform duration-300 hover:scale-110"
                 priority
               />
-              {/* Gradient overlay for opacity effect */}
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-white via-transparent to-transparent" style={{ background: 'linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 10%, rgba(255,255,255,0.8) 20%, rgba(255,255,255,0.6) 35%, rgba(255,255,255,0.3) 50%, transparent 70%, transparent 100%)' }}></div>
+              {/* No gradient overlay - clean look */}
             </div>
           </div>
 
           {/* Profile Card - Positioned below the image with overlap */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full" style={{ bottom: '-40%' }}>
-            <Card className="border-0 shadow-lg mx-auto max-w-2xl z-10">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full" style={{ bottom: '-50%' }}>
+            <Card className="border-0 shadow-lg mx-auto max-w-2xl z-10 cursor-pointer transition-transform duration-300 hover:scale-105">
               <CardContent className="pt-16 pb-8 px-8 text-center">
             {/* Name and Title */}
-            <div className="mb-6">
-              <h1 className="text-2xl font-bold text-black mb-2">
-                Rohith Gade
-              </h1>
-              <p className="text-gray-600 text-lg">
-                AI Automation Engineer
-              </p>
-              <p className="text-gray-500 text-sm">
-                AI Workflow Architect | Agentic Workflow Designer
-              </p>
-            </div>
-
             {/* Social Links */}
             <div className="flex justify-center space-x-4 mb-6">
               <Button
@@ -100,10 +101,13 @@ export default function Portfolio() {
           </CardContent>
             </Card>
           </div>
+          
+          {/* Hover Effect Overlay */}
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none rounded-lg" />
         </div>
 
         {/* About Me Section */}
-        <Card className="border-0 shadow-lg mt-56">
+        <Card className="border-0 shadow-lg mt-72">
           <CardContent className="p-6">
             <h2 className="text-xl font-semibold text-black mb-4">
               About Me
