@@ -9,7 +9,7 @@ export default function Portfolio() {
       {/* Header */}
       <div className="text-center mb-16">
         <p className="text-base text-gray-400 font-normal mb-4 italic">
-          Too broke for the fancy portfolio, so here's my budget-friendly 'masterpiece' till the real site escapes the pipeline 😉
+          Too broke for the fancy portfolio, so here&apos;s my budget-friendly &apos;masterpiece&apos; till the real site escapes the pipeline 😉
         </p>
         <h1 className="text-4xl font-light text-gray-900 mb-3 tracking-tight">
           ROHITH GADE
@@ -114,13 +114,13 @@ export default function Portfolio() {
             </h2>
             <div className="bg-gray-50 rounded-lg p-4">
               <p className="text-gray-700 leading-relaxed mb-4">
-                I'm a passionate AI Automation Engineer specializing in AI-powered workflow automation using n8n. 
+                I&apos;m a passionate AI Automation Engineer specializing in AI-powered workflow automation using n8n. 
                 I design intelligent agentic workflows that streamline business operations, reduce manual effort, 
                 and enable scalable automation with minimal human intervention.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 My expertise includes GPT-powered AI agents, embeddings, vector search, LangChain, and integrating 
-                multiple APIs for seamless data flow. I'm constantly exploring emerging AI automation trends to 
+                multiple APIs for seamless data flow. I&apos;m constantly exploring emerging AI automation trends to 
                 create innovative solutions.
               </p>
             </div>
